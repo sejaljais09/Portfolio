@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --skin-color:#e74c3c;
+    /* --skin-color:#e74c3c; */
    
     
     --bg-black-900:#f2f2fc;
@@ -12,6 +12,13 @@
     --text-black-700:#504e70;
 
 
+}
+body.dark{
+ --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
 }
 body{
     
@@ -24,7 +31,7 @@ body{
 *{
     margin: 0;
     padding: 0;
-    background-color: none;
+    background-color:var(--bg-black-100);
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -38,7 +45,7 @@ ul{
     list-style: none;
 }
 .home-section{
-   background:rgb(161, 181, 229);
+   background:var(--bg-black-100);
    min-height: 100vh;
    display: block;
    position: relative;
@@ -68,7 +75,7 @@ ul{
 }
 .section-title h2{
     font-size: 40px;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
     font-weight: 700;
     position: relative;
 }
@@ -127,7 +134,7 @@ ul{
 }
 .aside{
  width:270px;
- background:white;
+ background:var(--bg-black-100);
  position: fixed;
  left: 0;
  top:0;
@@ -157,7 +164,7 @@ ul{
 .aside .logo a{
     background:transparent;
     font-weight: 700;
-    color: black;
+    color:var(--text-black-700);
     letter-spacing: 5px;
     padding: 20px 15px;
     position: relative;
@@ -255,7 +262,7 @@ ul{
 .home-section{
     min-height: 100vh;
     display: flex;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
 
 }
 .home-section .home-info{
@@ -284,7 +291,7 @@ h3.my-profession{
     padding-left: 10px;
     margin-bottom: 70px;
     font-size: 20px;
-    color: var(--tect-black-700);
+    color: var(--text-black-700);
 }
 
 .home-section .home-img{
@@ -339,7 +346,7 @@ h3.my-profession{
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 700;
-    color: var(--tect-black-700);
+    color: var(--text-black-700);
 }
 .about .about-content .about-text h3 span{
     color: var(--skin-color);
@@ -347,7 +354,7 @@ h3.my-profession{
 .about .about-content .about-text p{
     font-size: 16px;
     line-height: 25px;
-    color: var(--tect-black-700);
+    color: var(--text-black-700);
 
 }
 .about .about-content .personal-info{
@@ -367,12 +374,12 @@ h3.my-profession{
     font-weight: 600;
     padding: 10px 0;
     font-size: 16px;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
     border-bottom: 1 px solid var(--bg-black-50);
 }
 .about .about-content .personal-info .info-item p span{
     font-weight: 400;
-    color: var(--tect-black-700);
+    color: var(--text-black-700);
     margin-left: 4px;
     display: inline-block;
 }
@@ -399,7 +406,7 @@ h3.my-profession{
     line-height: 40px;
     font-weight: 600;
     font-size: 16px;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
     text-transform: capitalize;
 }
 .about .about-content .skills .skill-item .progress{
@@ -421,7 +428,7 @@ h3.my-profession{
 .about .about-content .skills .skill-item .skill-percent{
     position: absolute;
     right: 0;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
     top: -40px;
     font-weight: 400;
     line-height: 40px;
@@ -438,7 +445,7 @@ h3.my-profession{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
     
 }
 .about .about-content .timeline-box{
@@ -486,22 +493,31 @@ h3.my-profession{
     font-weight: 400;
     font-size: 14px;
     margin-bottom: 12px;
-    color: var(--tect-black-700);
+    color: var(--text-black-700);
 }
-.about .about-content .timeline .timeline-date  .fa{
+.about .about-content .timeline   .fa{
 margin-right: 5px;
-}.about .about-content .timeline .timeline-title{
+color: var(--skin-color);
+}
+.about .about-content .timeline   h3{
+
+    
+color: var(--text-black-700);
+}
+
+
+.about .about-content .timeline .timeline-title{
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 15px;
     text-transform: capitalize;
-    color: var(--tect-black-900);
+    color: var(--text-black-900);
 }
 .about .about-content .timeline .timeline-text{
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
-    color: var(--tect-black-700);
+    color: var(--text-black-700);
 }
 /* service */
 .service .container{
@@ -548,12 +564,13 @@ margin-right: 5px;
 }
 .service .service-item .service-item-inner:hover .icon .fa{
     font-size: 25px;
-    color: #ffffff;
+    color:#ffffff;
 
 }
-.service .service-item .service-item-inner .h4{
+.service .service-item .service-item-inner h4{
     font-size: 18px;
     margin-bottom: 15px;
+     color: var(--text-black-700);
     columns: var(--bg-black-900);
     font-weight: 700;
     text-transform: capitalize;
@@ -631,4 +648,87 @@ margin-right: 5px;
     line-height: 25px;
     color: var(--text-black-700);
 
+}
+.contact .contact-form{
+    flex: 0 0 100%;
+    max-width:100%;
+}
+.contact .contact-form .col-6{
+    flex: 0 0 50%;
+    max-width: 50%;
+   
+    
+}
+.contact .contact-form .col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+   
+    
+}
+.contact .contact-form .form-item{
+    
+    margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control{
+    width: 100%;
+    height:50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border: 1 px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+.contact .contact-form .form-item .form-control:focus{
+    box-shadow: 0 0 20px rgba(48,46,77, 0.15);
+}
+.contact .contact-form .form-item .form-control textarea.form-control{
+    height: 140px;
+}
+.contact .contact-form .btn{
+    height: 50px;
+    padding: 0 50px;
+}
+@media (max-width:119px){
+    .aside{
+        left: -270px;
+    }
+    .main-content{
+        padding-left: 0;
+    }
+    .about .about-content .personal-info .info-item p span{
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width:991px){
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+        .service .service-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .home .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home-section .home-img,
+    .home-section .home-img img{
+    display: none;
+    }
+}
+@media (max-width:813px){
+    .contact .contact-form .col-6,
+    .contact.contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+.about .about-content .personal-info{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 }
