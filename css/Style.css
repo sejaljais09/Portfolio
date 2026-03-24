@@ -258,6 +258,10 @@ ul{
 .aside .nav li a i{
     margin-right: 15px;
 }
+.aside .nav li a:hover{
+    color: var(--skin-color);
+    
+}
 /* home */
 .home-section{
     min-height: 100vh;
@@ -561,10 +565,14 @@ color: var(--text-black-700);
 }
 .service .service-item .service-item-inner:hover .icon{
     background: var(--skin-color);
+    
+    
 }
 .service .service-item .service-item-inner:hover .icon .fa{
     font-size: 25px;
-    color:#ffffff;
+    color:var(--skin-color);
+   
+    
 
 }
 .service .service-item .service-item-inner h4{

@@ -16,7 +16,7 @@ function setActiveStyle(color){
         if(color===style.getAttribute("title")){
             style.removeAttribute("disabled");
         }else{
-              style.removeAttribute("disabled","true");
+              style.setAttribute("disabled","true");
         }
     })
 }
@@ -25,7 +25,7 @@ const dayNight=document.querySelector(".day-night");
 dayNight.addEventListener("click",()=>{
     dayNight.querySelector("i").classList.toggle("fa-sun");
     dayNight.querySelector("i").classList.toggle("fa-moon");
-    document,body.classList.togglee("dark");
+    document.body.classList.toggle("dark");
 })
 window.addEventListener("load",()=>{
     if(document.body.classList.contains("dark")){
