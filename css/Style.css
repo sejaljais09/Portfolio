@@ -44,20 +44,31 @@ body{
 ul{
     list-style: none;
 }
-.home-section{
+.section{
    background:var(--bg-black-100);
    min-height: 100vh;
    display: block;
    position: relative;
    opacity: 1;
+   position: fixed;
+   left: 270px;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 0;
+   overflow-y: auto;
+   overflow-x: hidden;
 
 }
+.section.active{
+    z-index: 2;
+    opacity: 1;
+}
 .hidden{
-    /* display: none !important; */
+    display: none !important;
 }
-.main-content{
-    padding-left: 270px;
-}
+
+
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
@@ -263,13 +274,13 @@ ul{
     
 }
 /* home */
-.home-section{
+.home{
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
 
 }
-.home-section .home-info{
+.home .home-info{
     flex: 0 0 60%;
     max-width: 60%;
 }
@@ -298,7 +309,7 @@ h3.my-profession{
     color: var(--text-black-700);
 }
 
-.home-section .home-img{
+.home .home-img{
     flex:0 0 40%;
     max-width: 40%;
     text-align: center;
@@ -326,7 +337,7 @@ h3.my-profession{
     left: -20px;
     top: -40px;
 }
-.home-section .home-img img{
+.home .home-img img{
     margin: auto;
     border-radius: 5px;
     height: 400px;
@@ -722,8 +733,8 @@ color: var(--text-black-700);
         flex: 0 0 100%;
         max-width: 100%;
     }
-    .home-section .home-img,
-    .home-section .home-img img{
+    .home .home-img,
+    .home .home-img img{
     display: none;
     }
 }
