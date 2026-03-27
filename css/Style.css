@@ -25,13 +25,13 @@ body{
     
     line-height: 2;
     font-size: 20px;
-    /* background-color: red; */
-    font-family: 'Poppins' sans-serif;
+background-color: var(--bg-black-100);
+    font-family: 'Poppins', sans-serif;
 }
 *{
     margin: 0;
     padding: 0;
-    background-color:var(--bg-black-100);
+    /* background-color:var(--bg-black-100); */
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -49,8 +49,9 @@ ul{
    min-height: 100vh;
    display: block;
    position: relative;
+   min-width: 300px;
    opacity: 1;
-   position: fixed;
+   position:fixed;
    left: 270px;
    top: 0;
    right: 0;
@@ -59,6 +60,7 @@ ul{
    overflow-y: auto;
    overflow-x: hidden;
   transition: all 0.3s ease;
+  
 }
 .section.back-section{
     z-index: 1;
@@ -244,6 +246,10 @@ ul{
     display: inline-block;
     position: relative;
 }
+.aside .nav-toggler.open span {
+    background: transparent;  /* hide middle line */
+}
+
 .aside .nav-toggler.open span::before{
     transform: rotate(45deg);
     top: 0;
@@ -306,6 +312,7 @@ ul{
 .home .home-info{
     flex: 0 0 60%;
     max-width: 60%;
+    min-width: 300px;
 }
 h3.hello{
     font-size: 28px;
@@ -566,10 +573,11 @@ color: var(--text-black-700);
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
+    min-width: 250px;
 }
 .service .service-item .service-item-inner{
     background-color: var(--bg-black-100);
-    border: 1 px solid var(--bg-black-50);
+    border: 1px solid var(--bg-black-50);
     border-radius: 10px;
     padding: 30px;
     text-align: center;
@@ -754,7 +762,7 @@ color: var(--text-black-700);
     .section{
         left: 0;
     }
-    .section.ope{
+    .section.open{
         left: 270px;
     }
     .about .about-content .personal-info .info-item p span{
@@ -779,7 +787,7 @@ color: var(--text-black-700);
     display: none;
     }
 }
-@media (max-width:813px){
+@media (max-width:767px){
     .contact .contact-form .col-6,
     .contact.contact-info-item,
     .portfolio .portfolio-item,
@@ -794,3 +802,37 @@ color: var(--text-black-700);
     
 }
 }
+/* @media (max-width:767px){
+
+    .row{
+        flex-direction: column;
+    }
+
+    .service .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .contact .contact-form .col-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    h3.hello{
+        font-size: 22px;
+    }
+
+    h3.my-profession{
+        font-size: 24px;
+    }
+} */
