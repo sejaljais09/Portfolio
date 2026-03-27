@@ -266,9 +266,9 @@ ul{
     bottom: -6px;
     right: 0;
 }
-.aside .nav-toggler.open span::before{
+.aside .nav-toggler.open span::after{
     transform: rotate(-45deg);
-    top: 0;
+    bottom: 0;
 }
 
 .aside .nav{
@@ -734,7 +734,9 @@ color: var(--text-black-700);
     padding: 0 50px;
 }
 @media (max-width:1199px){
-    
+    .section .container{
+        padding-top: 70px;
+    }
     .aside{
         left: -270px;
     }

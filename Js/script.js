@@ -20,7 +20,7 @@ for(let i=0;i<totalNavList;i++){
     for(let j=0;j<totalNavList;j++){
         if(navList[j].querySelector("a").classList.contains("active")){
         //   allSection[j].classList.add("back-section");
-        addBackSection();
+        addBackSection(j);
         }
         navList[j].querySelector("a").classList.remove("active");
     }
